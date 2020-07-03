@@ -1,0 +1,32 @@
+{
+  "name": "job-finder",
+  "version": "1.0.0",
+  "description": "System for finding jobs for developers.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucas-andrad/job-finder.git"
+  },
+  "keywords": [
+    "dev",
+    "jobs",
+    "dev",
+    "oportunity"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucas-andrad/job-finder/issues"
+  },
+  "homepage": "https://github.com/lucas-andrad/job-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "sequelize": "^6.2.4",
+    "sqlite3": "^5.0.0"
+  }
+}
