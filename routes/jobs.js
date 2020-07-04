@@ -12,7 +12,7 @@ router.get('/test', (req, res)=>{
 
 // adding job with post
 router.post('/add', (req, res)=> {
-    let (title, salary, company, description, email, new_job) = req.body;
+    let {title, salary, company, description, email, new_job} = req.body;
 
     // inserting data in system
     Job.create({
