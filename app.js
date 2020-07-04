@@ -3,10 +3,14 @@ const express = require('express');
 const app = express()
 const PORT = 3000;
 const db = require('./db/connection')
+const BodyParser = require('body-parser')
 
 app.listen(PORT, function() {
     console.log('running on '+ PORT + ' port')
 });
+
+// body-parser
+app.use(BodyParser.urlencoded({extended:false}))
 
 // db connection
 db
@@ -21,7 +25,9 @@ db
 
 // route
 app.get('/', (req, res)=>{
-    res.send('Running 3s29')
+    res.send('Running')
 });
 
 
+// jobs routes
+app.use('/jobs', require('./routes/jobs.js'))
