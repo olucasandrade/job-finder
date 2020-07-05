@@ -5,29 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>  
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar light">
-            <a href="index.html" class='navbar-brand'>Job Finder</a>
-            <button class="navbar-toggler", type="button", data-toggle="collapse" data-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false", aria-label="Toggle navigation">
-                <span class='navbar-toggler-icon'></span>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a href="index.html" class="navbar-brand">Job Finder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class='collapse navbar collapse' id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Ver Vagas</a>
+                        <a class="nav-link" href="index.html">See Jobs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary" href="add.html">Abrir Vagas</a>
+                        <a class="nav-link btn btn-primary" href="add.html">Open Job</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <div id="top-container" class="container-fluid">
+        <h1 class="main-title" class='text-center'>Find the ideal job here!</h1>
+        <p id='main-subtitle' class='text-center'>We are the site with most technology jobs in the country.</p>
+        <form action="" id="search-form" class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" id="job" name="job" placeholder="Enter the job here">
+            </div>
+            <div id="col-md-2">
+                <button class="btn btn-primary" type="submit">Find</button>
+            </div>
+        </form>
+    </div>
+    <main>
+        <div class="jobs-container" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="job-list-tile">
+                        Featured jobs
+                    </h2>
+                    <ul id="job-list" class="list-group">
+                        <li class='list-group-item' class="new-job">
+                            <img src="public/img/company.svg" alt="company">
+                            <p>Company</p>
+                            <h2>Job Title</h2>
+                            <p>$2000.00</p>
+                            <span class="new-job-label">New</span>
+                            <a href="" class="btn btn-primary">See Jobs</a>
+                        </li>
+                        <li class='list-group-item' class="new-job">
+                            <img src="public/img/company.svg" alt="company">
+                            <p>Company</p>
+                            <h2>Job Title</h2>
+                            <p>$2000.00</p>
+                            <span class="new-job-label">New</span>
+                            <a href="" class="btn btn-primary">See Jobs</a>
+                        </li>
+                        <li class='list-group-item' class="new-job">
+                            <img src="public/img/company.svg" alt="company">
+                            <p>Company</p>
+                            <h2>Job Title</h2>
+                            <p>$2000.00</p>
+                            <span class="new-job-label">New</span>
+                            <a href="" class="btn btn-primary">See Jobs</a>
+                        </li>
+                        <li class='list-group-item'>
+                            <img src="public/img/company.svg" alt="company">
+                            <p>Company</p>
+                            <h2>Job Title</h2>
+                            <p>$2000.00</p>
+                            <a href="" class="btn btn-primary">See Jobs</a>
+                        </li>
+                        <li class='list-group-item'>
+                            <img src="public/img/company.svg" alt="company">
+                            <p>Company</p>
+                            <h2>Job Title</h2>
+                            <p>$2000.00</p>
+                            <a href="" class="btn btn-primary">See Jobs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
