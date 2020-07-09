@@ -30,7 +30,7 @@
     border-radius: 0;
 }
 
-.nav-link.btn.btn-primary:hover, #search-form button:hover, .list-group-item a:hover{
+.nav-link.btn.btn-primary:hover, #search-form button:hover, .list-group-item a:hover, #form-box button:hover{
     background-color:azure;
     color: seagreen;
     border-color: seagreen;
@@ -43,7 +43,7 @@
     background-color: silver;
     border-bottom: 2px solid rgb(47, 50, 58);
     margin-bottom: 30px;
-    background-image: url('./img/banner2.jpg');
+    background-image: url('../img/banner2.jpg');
     background-position: 0 100px;
     background-size: cover;
     color: azure;

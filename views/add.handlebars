@@ -1,0 +1,34 @@
+  <div id="add-form-container" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Publish the job filling the form</h1>
+      </div>
+      <div id="form-box" class="col-md-12">
+        <h2>Fill in the questions carefully</h2>
+        <form action="">
+          <div class="form-group">
+            <label for="title">Job title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Type the job title" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Job description</label>
+            <textarea type="text" class="form-control" id="description" name="description" placeholder="Type the job activities" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="company">Contractor company</label>
+            <input type="text" class="form-control" id="company" name="company" placeholder="Type the company" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="chris.123@hotmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="salary">Salary</label>
+            <input type="text" class="form-control" id="salary" name="salary" placeholder="Type the salary" required>
+          </div>
+          <input type="hidden" name="new_job" value="1">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,9 +1,13 @@
 // Creating the server
 const express = require('express');
+const handlebars = require('express-handlebars')
 const app = express()
-const PORT = 3000;
 const db = require('./db/connection')
 const BodyParser = require('body-parser')
+const path = require('path')
+
+const PORT = 3000;
+
 
 app.listen(PORT, function() {
     console.log('running on '+ PORT + ' port')
@@ -11,6 +15,14 @@ app.listen(PORT, function() {
 
 // body-parser
 app.use(BodyParser.urlencoded({extended:false}))
+
+// handlebars
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+app.set('view engine', 'handlebars')
+
+// static folder
+app.use(express.static(path.join(__dirname, 'public')))
 
 // db connection
 db
@@ -25,7 +37,7 @@ db
 
 // route
 app.get('/', (req, res)=>{
-    res.send('Running')
+    res.render('layouts/index.handlebars')
 });
 
 

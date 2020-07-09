@@ -10,6 +10,10 @@ router.get('/test', (req, res)=>{
     res.send('Running')
 })
 
+router.get('/add', (req, res)=>{
+    res.render('add.handlebars')
+})
+
 // adding job with post
 router.post('/add', (req, res)=> {
     let {title, salary, company, description, email, new_job} = req.body;
