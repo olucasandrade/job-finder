@@ -2,7 +2,7 @@
   <div id="top-container" class="container-fluid">
     <h1 id="main-title" class="text-center">Find the ideal job here!</h1>
     <p id="main-subtitle" class="text-center">We are the site with most technology jobs in the country.</p>
-    <form id="search-form" class="form-inline" action="">
+    <form id="search-form" class="form-inline" action="/" method="GET">
       <div class="form-group col-md-10">
         <input type="text" class="form-control" id="job" name="job" placeholder="Type the job here">
       </div>
@@ -15,38 +15,22 @@
     <div id="jobs-container" class="container">
       <div class="row">
         <div class="col-md-12">
+          {{#if search}}
+          <h2 id="job-list-title">Looking for jobs that contains {{search}}</h2>
+          {{else}}
           <h2 id="job-list-title">Featured Jobs</h2>
+          {{/if}}
           <ul id="job-list" class="list-group">
+            {{#each jobs}}
             <li class="list-group-item new-job">
               <img src="img/company.svg" alt="Company">
-              <p>Company</p>
-              <h2>Job Title</h2>
-              <p>R$2000,00</p>
+              <p>{{dataValues.company}}</p>
+              <h2>{{dataValues.title}}</h2>
+              <p>R${{dataValues.salary}}</p>
               <span class="new-job-label">New</span>
               <a class="btn btn-primary">See Job</a>
             </li>
-            <li class="list-group-item new-job">
-              <img src="img/company.svg" alt="Company">
-              <p>Company</p>
-              <h2>Job Title</h2>
-              <p>R$2000,00</p>
-              <span class="new-job-label">New</span>
-              <a class="btn btn-primary">See Job</a>
-            </li>
-            <li class="list-group-item">
-              <img src="img/company.svg" alt="Company">
-              <p>Company</p>
-              <h2>Job title</h2>
-              <p>R$2000,00</p>
-              <a class="btn btn-primary">See Job</a>
-            </li>            
-            <li class="list-group-item">
-              <img src="img/company.svg" alt="Company">
-              <p>Company</p>
-              <h2>Job title</h2>
-              <p>R$2000,00</p>
-              <a class="btn btn-primary">See Job</a>
-            </li>
+            {{/each}}
           </ul>
         </div>
       </div>
