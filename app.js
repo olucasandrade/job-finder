@@ -49,7 +49,7 @@ app.get('/', (req, res)=>{
         ['createdAt', 'DESC']
     ]})
     .then(jobs=>{
-        res.render('layouts/index.handlebars', {
+        res.render('index.handlebars', {
             jobs
         });
     });  
